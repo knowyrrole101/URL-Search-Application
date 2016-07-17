@@ -9,26 +9,26 @@ var WebsiteSchema = new Schema({
   },
   submittedBy:{
     id:{
-      type:Schema.ObjectId,
+      type: Schema.ObjectId,
       ref:'User'
     },
-    url:{
-      type:String,
+  },
+  url:{
+    type:String,
+    required:true
+  },
+  description:{
+    type:String,
       required:true
-    },
-    description:{
-      type:String,
-      required:true
-    },
-    created_at:{
-      type:Date,
-      default: Date.now
-    }
+  },
+  created_at:{
+    type:Date,
+    default: Date.now
   }
 });
 
 WebsiteSchema.plugin(searchPlugin,{
   fields:['title','url','description']
-})
+});
 
 module.exports = mongoose.model('Website', WebsiteSchema);

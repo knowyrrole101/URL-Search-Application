@@ -11,6 +11,7 @@ var port = 3000;
 var db = 'mongodb://localhost/search_app';
 
 var users = require('./routes/user');
+var websites = require('./routes/website');
 
 mongoose.connect(db);
 
@@ -32,6 +33,7 @@ app.use(passport.session());
 
 //keep routes at bottom
 app.use('/users', users);
+app.use('/websites', websites);
 
 app.listen(port, function() {
   console.log('Search App Server listening on port ' + port);
