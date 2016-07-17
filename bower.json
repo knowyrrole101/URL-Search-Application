@@ -1,0 +1,24 @@
+{
+  "name": "search_app",
+  "description": "search web application in MEAN",
+  "main": "server.js",
+  "authors": [
+    "moon ahmed"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.3.1",
+    "angular-strap": "^2.3.9",
+    "angular-cookies": "^1.5.7"
+  }
+}
