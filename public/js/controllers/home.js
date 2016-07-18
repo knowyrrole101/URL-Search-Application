@@ -18,9 +18,9 @@
           console.log(data);
           $scope.searchText = '';
           $scope.site = data.data;
-          angular.forEach($scope.site, function(value, key) {
-            console.log(key + ':' + value);
-          });
+          // angular.forEach($scope.site, function(value, key) {
+          //   console.log(key + ':' + value);
+          // });
         });
       }
     }
