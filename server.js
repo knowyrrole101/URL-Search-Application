@@ -9,7 +9,13 @@ var path = require('path');
 var session = require('express-session');
 
 var port = 9000;
-var db = settings.mongo_production;
+
+if(settings.mongo_production){
+  var db = settings.mongo_production;
+} else {
+  var db = settings.mongo_development;
+}
+
 var users = require('./routes/user');
 var websites = require('./routes/website');
 
