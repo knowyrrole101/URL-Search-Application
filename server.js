@@ -3,12 +3,13 @@ var app = express();
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var settings = require('./config');
 var passport = require('passport');
 var path = require('path');
 var session = require('express-session');
 
 var port = 9000;
-var db = 'mongodb://localhost/search_app';
+var db = settings.mongo_production;
 var users = require('./routes/user');
 var websites = require('./routes/website');
 
